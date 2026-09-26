@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Tickets | Ticket AI</title>
+
+    <link
+        rel="stylesheet"
+        href="my-tickets.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- Background -->
+
+    <div class="background-shape shape-one"></div>
+
+    <div class="background-shape shape-two"></div>
+
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fa-solid fa-ticket"></i>
+
+            </div>
+
+
+            <div class="logo-text">
+
+                <strong>
+                    Ticket<span>AI</span>
+                </strong>
+
+                <small>
+                    SMART TRAVEL
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home
+
+            </a>
+
+
+            <a
+                href="my-tickets.html"
+                class="active"
+            >
+
+                <i class="fa-solid fa-ticket"></i>
+
+                My Tickets
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+                Help
+
+            </a>
+
+        </nav>
+
+
+        <div class="profile">
+
+            <div class="avatar">
+                P
+            </div>
+
+            <div class="profile-name">
+
+                <strong>
+                    Prudhvi
+                </strong>
+
+                <span>
+                    Traveler
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Main -->
+
+    <main class="container">
+
+
+        <!-- Page Heading -->
+
+        <section class="page-heading">
+
+            <div>
+
+                <span class="small-title">
+                    YOUR JOURNEYS
+                </span>
+
+                <h1>
+                    My Tickets
+                </h1>
+
+                <p>
+                    Manage and view all your bookings in one place.
+                </p>
+
+            </div>
+
+
+            <button
+                class="book-button"
+                onclick="bookNewTicket()"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Book New Ticket
+
+            </button>
+
+        </section>
+
+
+
+        <!-- Statistics -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+
+                    <i class="fa-solid fa-ticket"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL BOOKINGS
+                    </span>
+
+                    <strong>
+                        3
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        ACTIVE
+                    </span>
+
+                    <strong>
+                        1
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-route"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        COMPLETED
+                    </span>
+
+                    <strong>
+                        2
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL SPENT
+                    </span>
+
+                    <strong>
+                        ₹2,540
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Tabs -->
+
+        <div class="ticket-tabs">
+
+            <button
+                class="tab active"
+                onclick="showTab('upcoming', this)"
+            >
+
+                Upcoming
+
+                <span>
+                    1
+                </span>
+
+            </button>
+
+
+            <button
+                class="tab"
+                onclick="showTab('completed', this)"
+            >
+
+                Completed
+
+                <span>
+                    2
+                </span>
+
+            </button>
+
+
+            <button
+                class="tab"
+                onclick="showTab('cancelled', this)"
+            >
+
+                Cancelled
+
+                <span>
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- Upcoming -->
+
+        <section
+            id="upcoming"
+            class="ticket-list"
+        >
+
+
+            <!-- Ticket -->
+
+            <div class="ticket-card">
+
+
+                <!-- Ticket Top -->
+
+                <div class="ticket-top">
+
+                    <div class="company">
+
+                        <div class="bus-icon">
+
+                            <i class="fa-solid fa-bus"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Express Travels
+                            </strong>
+
+                            <span>
+                                AC Sleeper
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="status active-status">
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        Confirmed
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Journey -->
+
+                <div class="journey">
+
+
+                    <div class="journey-place">
+
+                        <strong>
+                            08:30 AM
+                        </strong>
+
+                        <span>
+                            Hyderabad
+                        </span>
+
+                        <small>
+                            28 Sep 2026
+                        </small>
+
+                    </div>
+
+
+                    <div class="journey-route">
+
+                        <span>
+                            5h 30m
+                        </span>
+
+
+                        <div class="route">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            <div></div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <small>
+                            Direct
+                        </small>
+
+                    </div>
+
+
+                    <div class="journey-place destination">
+
+                        <strong>
+                            02:00 PM
+                        </strong>
+
+                        <span>
+                            Bengaluru
+                        </span>
+
+                        <small>
+                            28 Sep 2026
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Details -->
+
+                <div class="ticket-details">
+
+
+                    <div>
+
+                        <span>
+                            BOOKING ID
+                        </span>
+
+                        <strong id="bookingId">
+                            TAI20260928
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            PASSENGER
+                        </span>
+
+                        <strong id="passengerName">
+                            Prudhvi
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            SEAT
+                        </span>
+
+                        <strong id="seatNumber">
+                            12A
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            TOTAL FARE
+                        </span>
+
+                        <strong class="fare">
+                            ₹930
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Ticket Bottom -->
+
+                <div class="ticket-bottom">
+
+
+                    <div class="boarding">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <div>
+
+                            <span>
+                                BOARDING POINT
+                            </span>
+
+                            <strong>
+                                Hyderabad MGBS
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ticket-actions">
+
+                        <button
+                            class="view-button"
+                            onclick="viewTicket()"
+                        >
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View Ticket
+
+                        </button>
+
+
+                        <button
+                            class="download-button"
+                            onclick="downloadTicket()"
+                        >
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+
+                        <button
+                            class="qr-button"
+                            onclick="showQR()"
+                        >
+
+                            <i class="fa-solid fa-qrcode"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- Completed -->
+
+        <section
+            id="completed"
+            class="ticket-list hidden"
+        >
+
+
+            <div class="old-ticket-card">
+
+                <div class="old-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </div>
+
+
+                <div class="old-content">
+
+                    <strong>
+                        Hyderabad → Vijayawada
+                    </strong>
+
+                    <span>
+                        15 Aug 2026 • Express Travels
+                    </span>
+
+                </div>
+
+
+                <div class="old-status">
+                    Completed
+                </div>
+
+            </div>
+
+
+            <div class="old-ticket-card">
+
+                <div class="old-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </div>
+
+
+                <div class="old-content">
+
+                    <strong>
+                        Bengaluru → Hyderabad
+                    </strong>
+
+                    <span>
+                        02 Jul 2026 • Orange Travels
+                    </span>
+
+                </div>
+
+
+                <div class="old-status">
+                    Completed
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Cancelled -->
+
+        <section
+            id="cancelled"
+            class="empty-section hidden"
+        >
+
+            <div class="empty-icon">
+
+                <i class="fa-solid fa-ticket"></i>
+
+            </div>
+
+            <h2>
+                No cancelled tickets
+            </h2>
+
+            <p>
+                Your cancelled bookings will appear here.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- QR Modal -->
+
+    <div
+        id="qrModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="close-button"
+                onclick="closeQR()"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-icon">
+
+                <i class="fa-solid fa-qrcode"></i>
+
+            </div>
+
+
+            <h2>
+                Ticket QR Code
+            </h2>
+
+            <p>
+                Show this QR code at the boarding point.
+            </p>
+
+
+            <div class="large-qr">
+
+                <div class="qr-design">
+
+                    <div class="qr-corner qr-one"></div>
+
+                    <div class="qr-corner qr-two"></div>
+
+                    <div class="qr-corner qr-three"></div>
+
+                    <div class="qr-lines"></div>
+
+                </div>
+
+            </div>
+
+
+            <strong class="modal-booking">
+                TAI20260928
+            </strong>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Toast -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>
+            Done
+        </span>
+
+    </div>
+
+
+
+    <script src="my-tickets.js"></script>
+
+</body>
+
+</html>

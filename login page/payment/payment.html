@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment | Ticket AI</title>
+
+    <link rel="stylesheet" href="payment.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-ticket"></i>
+            </div>
+
+            <div class="logo-text">
+                <div>
+                    Ticket<span>AI</span>
+                </div>
+
+                <small>SMART TRAVEL</small>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="#">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-ticket"></i>
+                My Tickets
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-circle-question"></i>
+                Help
+            </a>
+
+        </nav>
+
+
+        <div class="profile">
+
+            <div class="profile-avatar">
+                P
+            </div>
+
+            <div class="profile-text">
+                <strong>Prudhvi</strong>
+                <span>Traveler</span>
+            </div>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+
+    <main class="main-container">
+
+
+        <!-- Progress -->
+
+        <section class="progress-card">
+
+            <div class="progress-top">
+
+                <div>
+                    <span class="step-label">
+                        BOOKING PROCESS
+                    </span>
+
+                    <h3>
+                        Payment
+                    </h3>
+                </div>
+
+                <div class="step-number">
+                    07
+                    <span>/ 10</span>
+                </div>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step completed">
+                    <div class="step-circle">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span>Search</span>
+                </div>
+
+                <div class="step completed">
+                    <div class="step-circle">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span>Bus</span>
+                </div>
+
+                <div class="step completed">
+                    <div class="step-circle">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span>Seats</span>
+                </div>
+
+                <div class="step completed">
+                    <div class="step-circle">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span>Passenger</span>
+                </div>
+
+                <div class="step active">
+                    <div class="step-circle">
+                        5
+                    </div>
+                    <span>Payment</span>
+                </div>
+
+                <div class="step">
+                    <div class="step-circle">
+                        6
+                    </div>
+                    <span>Confirm</span>
+                </div>
+
+            </div>
+
+
+            <div class="progress-line">
+                <div class="progress-fill"></div>
+            </div>
+
+        </section>
+
+
+        <!-- Title -->
+
+        <section class="page-title">
+
+            <div>
+
+                <span class="mini-label">
+                    <i class="fa-solid fa-credit-card"></i>
+                    STEP 7
+                </span>
+
+                <h1>
+                    Complete your
+                    <span>payment</span>
+                </h1>
+
+                <p>
+                    Choose your preferred payment method and complete your booking.
+                </p>
+
+            </div>
+
+
+            <div class="secure-badge">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <div>
+                    <strong>100% Secure</strong>
+                    <span>Encrypted payment</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Grid -->
+
+        <div class="payment-grid">
+
+
+            <!-- Payment Section -->
+
+            <section class="payment-card">
+
+                <div class="card-header">
+
+                    <div class="header-icon">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Choose Payment Method
+                        </h2>
+
+                        <p>
+                            Select how you want to pay
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Payment Tabs -->
+
+                <div class="payment-methods">
+
+                    <button
+                        type="button"
+                        class="payment-method active"
+                        data-method="upi"
+                    >
+
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+
+                        <span>UPI</span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="payment-method"
+                        data-method="card"
+                    >
+
+                        <i class="fa-regular fa-credit-card"></i>
+
+                        <span>Card</span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="payment-method"
+                        data-method="netbanking"
+                    >
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                        <span>Net Banking</span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- UPI -->
+
+                <div
+                    class="payment-form active"
+                    id="upiForm"
+                >
+
+                    <div class="form-title">
+
+                        <div class="method-icon upi">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+
+                        <div>
+                            <h3>Pay with UPI</h3>
+                            <p>Enter your UPI ID</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            UPI ID
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-at"></i>
+
+                            <input
+                                type="text"
+                                id="upiId"
+                                placeholder="example@upi"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="upi-apps">
+
+                        <span>Popular UPI apps</span>
+
+                        <div class="upi-options">
+
+                            <div class="upi-option">
+                                GPay
+                            </div>
+
+                            <div class="upi-option">
+                                PhonePe
+                            </div>
+
+                            <div class="upi-option">
+                                Paytm
+                            </div>
+
+                            <div class="upi-option">
+                                BHIM
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Card -->
+
+                <div
+                    class="payment-form"
+                    id="cardForm"
+                >
+
+                    <div class="form-title">
+
+                        <div class="method-icon card">
+                            <i class="fa-regular fa-credit-card"></i>
+                        </div>
+
+                        <div>
+                            <h3>Card Payment</h3>
+                            <p>Enter your card details</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Card Number
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-credit-card"></i>
+
+                            <input
+                                type="text"
+                                id="cardNumber"
+                                maxlength="19"
+                                placeholder="1234 5678 9012 3456"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+
+                            <label>
+                                Expiry Date
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                <input
+                                    type="text"
+                                    id="expiry"
+                                    maxlength="5"
+                                    placeholder="MM/YY"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                CVV
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="cvv"
+                                    maxlength="3"
+                                    placeholder="•••"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Card Holder Name
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="cardName"
+                                placeholder="Name on card"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Net Banking -->
+
+                <div
+                    class="payment-form"
+                    id="netbankingForm"
+                >
+
+                    <div class="form-title">
+
+                        <div class="method-icon bank">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+
+                        <div>
+                            <h3>Net Banking</h3>
+                            <p>Select your bank</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Select Bank
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-building-columns"></i>
+
+                            <select id="bank">
+
+                                <option value="">
+                                    Select your bank
+                                </option>
+
+                                <option value="SBI">
+                                    State Bank of India
+                                </option>
+
+                                <option value="HDFC">
+                                    HDFC Bank
+                                </option>
+
+                                <option value="ICICI">
+                                    ICICI Bank
+                                </option>
+
+                                <option value="Axis">
+                                    Axis Bank
+                                </option>
+
+                                <option value="Kotak">
+                                    Kotak Mahindra Bank
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Security -->
+
+                <div class="security-info">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <div>
+
+                        <strong>
+                            Your payment is secure
+                        </strong>
+
+                        <p>
+                            Ticket AI uses encrypted payment processing to protect your information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="form-footer">
+
+                    <button
+                        type="button"
+                        class="back-button"
+                        onclick="goBack()"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pay-button"
+                        onclick="processPayment()"
+                    >
+
+                        Pay ₹930
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Right Side -->
+
+            <aside class="right-column">
+
+
+                <!-- Journey -->
+
+                <div class="journey-card">
+
+                    <div class="journey-header">
+
+                        <div>
+                            <span>YOUR JOURNEY</span>
+                            <h3>Express Travels</h3>
+                        </div>
+
+                        <div class="bus-icon">
+                            <i class="fa-solid fa-bus"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="route">
+
+                        <div class="route-point">
+
+                            <strong>
+                                08:30
+                            </strong>
+
+                            <span>
+                                Hyderabad
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-line">
+
+                            <span>
+                                5h 30m
+                            </span>
+
+                            <div></div>
+
+                        </div>
+
+
+                        <div class="route-point destination">
+
+                            <strong>
+                                14:00
+                            </strong>
+
+                            <span>
+                                Bengaluru
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="journey-info">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            28 Sep 2026
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-bed"></i>
+                            AC Sleeper
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Fare -->
+
+                <div class="fare-card">
+
+                    <div class="fare-title">
+
+                        <h3>
+                            Fare Summary
+                        </h3>
+
+                        <i class="fa-solid fa-receipt"></i>
+
+                    </div>
+
+
+                    <div class="fare-row">
+                        <span>Ticket Fare</span>
+                        <strong>₹850</strong>
+                    </div>
+
+
+                    <div class="fare-row">
+                        <span>Seat Charge</span>
+                        <strong>₹50</strong>
+                    </div>
+
+
+                    <div class="fare-row">
+                        <span>Convenience Fee</span>
+                        <strong>₹30</strong>
+                    </div>
+
+
+                    <div class="divider"></div>
+
+
+                    <div class="total">
+
+                        <span>Total Payable</span>
+
+                        <strong>
+                            ₹930
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Secure -->
+
+                <div class="secure-card">
+
+                    <div class="secure-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Safe & Secure
+                        </strong>
+
+                        <p>
+                            Your payment details are protected with secure encryption.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI -->
+
+                <div class="ai-card">
+
+                    <div class="ai-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Ticket AI
+                        </strong>
+
+                        <p>
+                            You're almost there! Complete the payment to confirm your journey.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- Toast -->
+
+    <div id="toast" class="toast">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>
+            Payment successful!
+        </span>
+
+    </div>
+
+
+    <script src="payment.js"></script>
+
+</body>
+
+</html>

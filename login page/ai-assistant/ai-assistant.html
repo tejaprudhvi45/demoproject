@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Assistant | Ticket AI</title>
+
+    <link
+        rel="stylesheet"
+        href="ai-assistant.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- Background -->
+
+    <div class="background-shape shape-one"></div>
+
+    <div class="background-shape shape-two"></div>
+
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fa-solid fa-ticket"></i>
+
+            </div>
+
+
+            <div class="logo-text">
+
+                <strong>
+                    Ticket<span>AI</span>
+                </strong>
+
+                <small>
+                    SMART TRAVEL
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home
+
+            </a>
+
+
+            <a href="my-tickets.html">
+
+                <i class="fa-solid fa-ticket"></i>
+
+                My Tickets
+
+            </a>
+
+
+            <a
+                href="ai-assistant.html"
+                class="active"
+            >
+
+                <i class="fa-solid fa-robot"></i>
+
+                AI Assistant
+
+            </a>
+
+        </nav>
+
+
+        <div class="profile">
+
+            <div class="avatar">
+                P
+            </div>
+
+            <div class="profile-info">
+
+                <strong>
+                    Prudhvi
+                </strong>
+
+                <span>
+                    Traveler
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Main -->
+
+    <main class="container">
+
+
+        <!-- Page Header -->
+
+        <section class="page-heading">
+
+            <span>
+                <i class="fa-solid fa-sparkles"></i>
+                AI POWERED TRAVEL
+            </span>
+
+            <h1>
+                Your personal
+                <strong>travel assistant.</strong>
+            </h1>
+
+            <p>
+                Ask anything about your journey, tickets, buses,
+                routes and travel plans.
+            </p>
+
+        </section>
+
+
+
+        <!-- AI Card -->
+
+        <section class="assistant-card">
+
+
+            <!-- Chat Header -->
+
+            <div class="chat-header">
+
+                <div class="ai-profile">
+
+                    <div class="ai-avatar">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Ticket AI Assistant
+                        </strong>
+
+                        <span>
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Online • Ready to help
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="clear-button"
+                    onclick="clearChat()"
+                >
+
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                    New Chat
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Chat -->
+
+            <div
+                class="chat-box"
+                id="chatBox"
+            >
+
+
+                <!-- AI Message -->
+
+                <div class="message ai-message">
+
+                    <div class="message-avatar">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            Ticket AI
+                        </div>
+
+                        <div class="bubble">
+
+                            Hi Prudhvi! 👋
+
+                            <br><br>
+
+                            I'm your Ticket AI travel assistant.
+
+                            I can help you with:
+
+                            <br><br>
+
+                            • Finding buses and routes
+                            <br>
+                            • Checking your bookings
+                            <br>
+                            • Understanding ticket prices
+                            <br>
+                            • Seat information
+                            <br>
+                            • Travel details
+
+                            <br><br>
+
+                            How can I help you today?
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Questions -->
+
+                <div class="quick-section">
+
+                    <span>
+                        Quick questions
+                    </span>
+
+
+                    <div class="quick-buttons">
+
+                        <button onclick="quickMessage('Show my tickets')">
+
+                            <i class="fa-solid fa-ticket"></i>
+
+                            My tickets
+
+                        </button>
+
+
+                        <button onclick="quickMessage('Find buses from Hyderabad to Bengaluru')">
+
+                            <i class="fa-solid fa-bus"></i>
+
+                            Find a bus
+
+                        </button>
+
+
+                        <button onclick="quickMessage('What is my seat number?')">
+
+                            <i class="fa-solid fa-chair"></i>
+
+                            My seat
+
+                        </button>
+
+
+                        <button onclick="quickMessage('What is my booking status?')">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Booking status
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Input -->
+
+            <div class="input-area">
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="text"
+                        id="messageInput"
+                        placeholder="Ask Ticket AI anything..."
+                        autocomplete="off"
+                        onkeydown="handleKey(event)"
+                    >
+
+
+                    <button
+                        class="send-button"
+                        onclick="sendMessage()"
+                    >
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                    </button>
+
+                </div>
+
+
+                <p>
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Ticket AI can make mistakes. Verify important
+                    booking information before travelling.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Feature Cards -->
+
+        <section class="features">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon purple">
+
+                    <i class="fa-solid fa-route"></i>
+
+                </div>
+
+                <h3>
+                    Smart Routes
+                </h3>
+
+                <p>
+                    Get route and journey information quickly.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon blue">
+
+                    <i class="fa-solid fa-ticket"></i>
+
+                </div>
+
+                <h3>
+                    Ticket Help
+                </h3>
+
+                <p>
+                    Check your booking and ticket information.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon green">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <h3>
+                    Travel Updates
+                </h3>
+
+                <p>
+                    Get useful information about your journey.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- Toast -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>
+            Done
+        </span>
+
+    </div>
+
+
+    <script src="ai-assistant.js"></script>
+
+</body>
+
+</html>

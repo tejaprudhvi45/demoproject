@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Passenger Details | Ticket AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="passenger-details.css">
+</head>
+
+<body>
+
+    <!-- Background Shapes -->
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-ticket"></i>
+            </div>
+
+            <div>
+                <span>Ticket</span><b>AI</b>
+                <small>SMART TRAVEL</small>
+            </div>
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="#">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-ticket"></i>
+                My Tickets
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-circle-question"></i>
+                Help
+            </a>
+
+        </nav>
+
+
+        <div class="profile">
+
+            <div class="profile-avatar">
+                P
+            </div>
+
+            <div class="profile-text">
+                <strong>Prudhvi</strong>
+                <span>Traveler</span>
+            </div>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+
+    <main class="main-container">
+
+
+        <!-- Progress -->
+
+        <section class="progress-card">
+
+            <div class="progress-top">
+
+                <div>
+
+                    <span class="step-label">
+                        BOOKING PROCESS
+                    </span>
+
+                    <h3>
+                        Passenger Details
+                    </h3>
+
+                </div>
+
+                <div class="step-number">
+                    06
+                    <span>/ 10</span>
+                </div>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step completed">
+                    <div class="step-circle">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <span>Search</span>
+                </div>
+
+
+                <div class="step completed">
+                    <div class="step-circle">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <span>Bus</span>
+                </div>
+
+
+                <div class="step completed">
+                    <div class="step-circle">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <span>Seats</span>
+                </div>
+
+
+                <div class="step active">
+                    <div class="step-circle">
+                        4
+                    </div>
+
+                    <span>Passenger</span>
+                </div>
+
+
+                <div class="step">
+                    <div class="step-circle">
+                        5
+                    </div>
+
+                    <span>Payment</span>
+                </div>
+
+
+                <div class="step">
+                    <div class="step-circle">
+                        6
+                    </div>
+
+                    <span>Confirm</span>
+                </div>
+
+            </div>
+
+
+            <div class="progress-line">
+
+                <div class="progress-fill"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Page Title -->
+
+        <section class="page-title">
+
+            <div>
+
+                <span class="mini-label">
+                    <i class="fa-solid fa-user-pen"></i>
+                    STEP 6
+                </span>
+
+                <h1>
+                    Tell us about the
+                    <span>passenger</span>
+                </h1>
+
+                <p>
+                    Enter the passenger details to continue with your booking.
+                </p>
+
+            </div>
+
+
+            <div class="secure-badge">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <div>
+                    <strong>Secure Booking</strong>
+                    <span>Your information is encrypted</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Grid -->
+
+        <div class="booking-grid">
+
+
+            <!-- LEFT SIDE -->
+
+            <section class="form-card">
+
+
+                <!-- Card Header -->
+
+                <div class="card-header">
+
+                    <div class="header-icon purple">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Passenger Information
+                        </h2>
+
+                        <p>
+                            Please enter accurate information
+                        </p>
+
+                    </div>
+
+                    <div class="required">
+                        * Required
+                    </div>
+
+                </div>
+
+
+                <!-- Avatar -->
+
+                <div class="passenger-profile">
+
+                    <div class="big-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Primary Passenger
+                        </strong>
+
+                        <p>
+                            This information will appear on your ticket.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="passengerForm">
+
+
+                    <!-- Name -->
+
+                    <div class="form-group full">
+
+                        <label for="name">
+                            Full Name
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter passenger's full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Age Gender -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="age">
+                                Age
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-cake-candles"></i>
+
+                                <input
+                                    type="number"
+                                    id="age"
+                                    placeholder="Age"
+                                    min="1"
+                                    max="120"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="gender">
+                                Gender
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-venus-mars"></i>
+
+                                <select id="gender" required>
+
+                                    <option value="">
+                                        Select gender
+                                    </option>
+
+                                    <option value="Male">
+                                        Male
+                                    </option>
+
+                                    <option value="Female">
+                                        Female
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact -->
+
+                    <div class="section-heading">
+
+                        <i class="fa-solid fa-address-book"></i>
+
+                        Contact Information
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Mobile Number
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    placeholder="10-digit mobile number"
+                                    maxlength="10"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="you@example.com"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ID -->
+
+                    <div class="section-heading">
+
+                        <i class="fa-solid fa-id-card"></i>
+
+                        Identity Verification
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="idType">
+                                ID Proof
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-id-card"></i>
+
+                                <select id="idType" required>
+
+                                    <option value="">
+                                        Select ID proof
+                                    </option>
+
+                                    <option value="Aadhaar">
+                                        Aadhaar Card
+                                    </option>
+
+                                    <option value="Passport">
+                                        Passport
+                                    </option>
+
+                                    <option value="Driving License">
+                                        Driving License
+                                    </option>
+
+                                    <option value="Voter ID">
+                                        Voter ID
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="idNumber">
+                                ID Number
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-hashtag"></i>
+
+                                <input
+                                    type="text"
+                                    id="idNumber"
+                                    placeholder="Enter ID number"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Request -->
+
+                    <div class="form-group">
+
+                        <label for="specialRequest">
+                            Special Request
+                            <span class="optional">(Optional)</span>
+                        </label>
+
+                        <div class="textarea-box">
+
+                            <i class="fa-regular fa-message"></i>
+
+                            <textarea
+                                id="specialRequest"
+                                rows="3"
+                                placeholder="Any special request or requirement?"
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Save -->
+
+                    <label class="save-details">
+
+                        <input
+                            type="checkbox"
+                            id="saveDetails"
+                        >
+
+                        <span class="custom-checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <span class="save-text">
+
+                            <strong>
+                                Save passenger details
+                            </strong>
+
+                            <small>
+                                Use these details automatically next time.
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- Buttons -->
+
+                    <div class="form-footer">
+
+                        <button
+                            type="button"
+                            class="back-button"
+                            onclick="goBack()"
+                        >
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Back
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="continue-button"
+                        >
+                            Continue to Payment
+
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- RIGHT SIDE -->
+
+            <aside class="right-column">
+
+
+                <!-- Journey Card -->
+
+                <div class="journey-card">
+
+                    <div class="journey-header">
+
+                        <div>
+
+                            <span>
+                                YOUR JOURNEY
+                            </span>
+
+                            <h3>
+                                Express Travels
+                            </h3>
+
+                        </div>
+
+                        <div class="bus-icon">
+                            <i class="fa-solid fa-bus"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="route">
+
+                        <div class="route-point">
+
+                            <div class="time">
+                                08:30
+                            </div>
+
+                            <strong>
+                                Hyderabad
+                            </strong>
+
+                            <span>
+                                Departure
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-line">
+
+                            <span>
+                                5h 30m
+                            </span>
+
+                            <div class="line">
+                                <i class="fa-solid fa-circle"></i>
+                                <div></div>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-point destination">
+
+                            <div class="time">
+                                14:00
+                            </div>
+
+                            <strong>
+                                Bengaluru
+                            </strong>
+
+                            <span>
+                                Arrival
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="journey-date">
+
+                        <div>
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <span>
+                                28 September 2026
+                            </span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-bed"></i>
+
+                            <span>
+                                AC Sleeper
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Seat Card -->
+
+                <div class="seat-card">
+
+                    <div class="seat-title">
+
+                        <div class="seat-icon">
+                            <i class="fa-solid fa-couch"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                SELECTED SEAT
+                            </span>
+
+                            <strong id="selectedSeat">
+                                Seat 12A
+                            </strong>
+
+                        </div>
+
+                        <i class="fa-solid fa-check-circle"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Fare Card -->
+
+                <div class="fare-card">
+
+                    <div class="fare-title">
+
+                        <h3>
+                            Fare Summary
+                        </h3>
+
+                        <i class="fa-solid fa-receipt"></i>
+
+                    </div>
+
+
+                    <div class="fare-row">
+
+                        <span>
+                            Ticket Fare
+                        </span>
+
+                        <strong>
+                            ₹850
+                        </strong>
+
+                    </div>
+
+
+                    <div class="fare-row">
+
+                        <span>
+                            Seat Charge
+                        </span>
+
+                        <strong>
+                            ₹50
+                        </strong>
+
+                    </div>
+
+
+                    <div class="fare-row">
+
+                        <span>
+                            Convenience Fee
+                        </span>
+
+                        <strong>
+                            ₹30
+                        </strong>
+
+                    </div>
+
+
+                    <div class="fare-divider"></div>
+
+
+                    <div class="total-row">
+
+                        <div>
+
+                            <span>
+                                Total Amount
+                            </span>
+
+                            <small>
+                                Inclusive of all charges
+                            </small>
+
+                        </div>
+
+                        <strong>
+                            ₹930
+                        </strong>
+
+                    </div>
+
+
+                    <div class="secure-payment">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>
+                            Safe & secure payment
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI Card -->
+
+                <div class="ai-card">
+
+                    <div class="ai-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Ticket AI
+                        </strong>
+
+                        <p>
+                            Your details are protected and will only be used for this booking.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- Toast -->
+
+    <div id="toast" class="toast">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>
+            Passenger details saved!
+        </span>
+
+    </div>
+
+
+    <script src="passenger-details.js"></script>
+
+</body>
+
+</html>

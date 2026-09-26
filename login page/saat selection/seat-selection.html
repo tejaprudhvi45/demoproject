@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ticket AI - Seat Selection</title>
+
+    <link rel="stylesheet" href="seat-selection.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            Ticket<span>AI</span>
+        </div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="ticket-results.html">Search</a>
+            <a href="#">My Tickets</a>
+        </nav>
+
+        <div class="profile">
+            <div class="profile-circle">P</div>
+            <span>Prudhvi</span>
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="container">
+
+        <!-- Heading -->
+        <div class="page-heading">
+
+            <div>
+                <p class="step">STEP 5 OF 10</p>
+
+                <h1>Select Your Seat</h1>
+
+                <p>
+                    Choose your preferred seat for the journey.
+                </p>
+            </div>
+
+            <button
+                class="back-btn"
+                onclick="goBack()">
+
+                ← Back
+
+            </button>
+
+        </div>
+
+
+        <!-- Layout -->
+        <div class="seat-layout">
+
+
+            <!-- Left -->
+            <section class="seat-section">
+
+                <div class="bus-card">
+
+                    <div class="bus-header">
+
+                        <div>
+                            <h2>Express Travels</h2>
+
+                            <p>
+                                Hyderabad → Bengaluru
+                            </p>
+                        </div>
+
+                        <span>
+                            AC Sleeper
+                        </span>
+
+                    </div>
+
+
+                    <!-- Driver -->
+                    <div class="driver">
+                        🚍 Driver
+                    </div>
+
+
+                    <!-- Seats -->
+                    <div class="bus">
+
+                        <div class="row">
+
+                            <button
+                                class="seat available"
+                                data-seat="1A">
+                                1A
+                            </button>
+
+                            <button
+                                class="seat available"
+                                data-seat="1B">
+                                1B
+                            </button>
+
+                            <div class="aisle"></div>
+
+                            <button
+                                class="seat occupied"
+                                data-seat="1C">
+                                1C
+                            </button>
+
+                            <button
+                                class="seat available"
+                                data-seat="1D">
+                                1D
+                            </button>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <button
+                                class="seat available"
+                                data-seat="2A">
+                                2A
+                            </button>
+
+                            <button
+                                class="seat occupied"
+                                data-seat="2B">
+                                2B
+                            </button>
+
+                            <div class="aisle"></div>
+
+                            <button
+                                class="seat available"
+                                data-seat="2C">
+                                2C
+                            </button>
+
+                            <button
+                                class="seat available"
+                                data-seat="2D">
+                                2D
+                            </button>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <button
+                                class="seat available"
+                                data-seat="3A">
+                                3A
+                            </button>
+
+                            <button
+                                class="seat available"
+                                data-seat="3B">
+                                3B
+                            </button>
+
+                            <div class="aisle"></div>
+
+                            <button
+                                class="seat occupied"
+                                data-seat="3C">
+                                3C
+                            </button>
+
+                            <button
+                                class="seat available"
+                                data-seat="3D">
+                                3D
+                            </button>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <button
+                                class="seat occupied"
+                                data-seat="4A">
+                                4A
+                            </button>
+
+                            <button
+                                class="seat available"
+                                data-seat="4B">
+                                4B
+                            </button>
+
+                            <div class="aisle"></div>
+
+                            <button
+                                class="seat available"
+                                data-seat="4C">
+                                4C
+                            </button>
+
+                            <button
+                                class="seat available"
+                                data-seat="4D">
+                                4D
+                            </button>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <button
+                                class="seat available"
+                                data-seat="5A">
+                                5A
+                            </button>
+
+                            <button
+                                class="seat available"
+                                data-seat="5B">
+                                5B
+                            </button>
+
+                            <div class="aisle"></div>
+
+                            <button
+                                class="seat available"
+                                data-seat="5C">
+                                5C
+                            </button>
+
+                            <button
+                                class="seat occupied"
+                                data-seat="5D">
+                                5D
+                            </button>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <button
+                                class="seat available"
+                                data-seat="6A">
+                                6A
+                            </button>
+
+                            <button
+                                class="seat available"
+                                data-seat="6B">
+                                6B
+                            </button>
+
+                            <div class="aisle"></div>
+
+                            <button
+                                class="seat available"
+                                data-seat="6C">
+                                6C
+                            </button>
+
+                            <button
+                                class="seat available"
+                                data-seat="6D">
+                                6D
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Legend -->
+                    <div class="legend">
+
+                        <div>
+                            <span class="legend-seat available-box"></span>
+                            Available
+                        </div>
+
+                        <div>
+                            <span class="legend-seat selected-box"></span>
+                            Selected
+                        </div>
+
+                        <div>
+                            <span class="legend-seat occupied-box"></span>
+                            Occupied
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Right -->
+            <aside class="summary-card">
+
+                <h2>Your Selection</h2>
+
+
+                <div class="selected-box">
+
+                    <span>Selected Seat</span>
+
+                    <strong id="selectedSeat">
+                        None
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>Ticket Price</span>
+
+                    <strong>₹850</strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>Seat Charge</span>
+
+                    <strong>₹50</strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>Convenience Fee</span>
+
+                    <strong>₹30</strong>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <div class="total-row">
+
+                    <span>Total</span>
+
+                    <strong id="total">
+                        ₹930
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="continue-btn"
+                    id="continueBtn"
+                    onclick="continueBooking()">
+
+                    Continue
+
+                    <span>→</span>
+
+                </button>
+
+
+                <p class="secure">
+                    🔒 Secure booking
+                </p>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+
+    <script src="seat-selection.js"></script>
+
+</body>
+</html>
