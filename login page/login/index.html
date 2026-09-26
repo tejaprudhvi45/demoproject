@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TicketAI - Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+
+        <div class="gradient gradient-1"></div>
+        <div class="gradient gradient-2"></div>
+        <div class="gradient gradient-3"></div>
+
+        <!-- Particles -->
+        <div class="particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Left AI Section -->
+        <section class="ai-section">
+
+            <div class="ai-orb">
+
+                <div class="orb-ring ring-1"></div>
+                <div class="orb-ring ring-2"></div>
+                <div class="orb-ring ring-3"></div>
+
+                <div class="orb-core">
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+            <h1>
+                Your journey,
+                <span>simplified.</span>
+            </h1>
+
+            <p>
+                Let TicketAI find and book your tickets
+                through the power of voice.
+            </p>
+
+            <div class="voice-status">
+
+                <div class="sound-bars">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+
+                <span>AI Voice Assistant</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Login Card -->
+        <section class="login-card">
+
+            <!-- Logo -->
+            <div class="logo">
+
+                <div class="logo-icon">
+                    🎫
+                </div>
+
+                <div>
+                    <h2>Ticket<span>AI</span></h2>
+                    <p>Smart ticket booking</p>
+                </div>
+
+            </div>
+
+
+            <!-- Heading -->
+            <div class="heading">
+
+                <h3>Welcome back</h3>
+
+                <p>
+                    Sign in to continue your journey
+                </p>
+
+            </div>
+
+
+            <!-- Login Form -->
+            <form id="loginForm">
+
+                <!-- Email -->
+                <div class="input-group">
+
+                    <input
+                        type="email"
+                        id="email"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <label for="email">
+                        Email address
+                    </label>
+
+                    <div class="input-line"></div>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-group password-group">
+
+                    <input
+                        type="password"
+                        id="password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        id="passwordToggle"
+                        aria-label="Show password"
+                    >
+                        👁
+                    </button>
+
+                    <div class="input-line"></div>
+
+                </div>
+
+
+                <!-- Options -->
+                <div class="options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                        >
+
+                        <span class="custom-checkbox"></span>
+
+                        <span>Remember me</span>
+
+                    </label>
+
+
+                    <a href="#" id="forgotPassword">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login Button -->
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton"
+                >
+
+                    <span class="button-text">
+                        Sign in
+                    </span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                    <span class="loader"></span>
+
+                </button>
+
+            </form>
+
+
+            <!-- Divider -->
+            <div class="divider">
+
+                <span>OR</span>
+
+            </div>
+
+
+            <!-- Voice Login -->
+            <button
+                class="voice-button"
+                id="voiceButton"
+                type="button"
+            >
+
+                <span class="mic-icon">🎙</span>
+
+                <span>
+                    Continue with voice
+                </span>
+
+            </button>
+
+
+            <!-- Register -->
+            <div class="register">
+
+                <span>Don't have an account?</span>
+
+                <a href="#" id="registerLink">
+                    Create account
+                </a>
+
+            </div>
+
+
+            <!-- Footer -->
+            <div class="secure">
+
+                <span>🔒</span>
+
+                <span>
+                    Your information is securely protected
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+
+        <span class="toast-icon">✓</span>
+
+        <span id="toastMessage">
+            Login successful
+        </span>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

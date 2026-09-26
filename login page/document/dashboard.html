@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TicketAI - AI Ticket Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ============================= -->
+    <!-- BACKGROUND -->
+    <!-- ============================= -->
+
+    <div class="background">
+
+        <div class="gradient gradient-1"></div>
+        <div class="gradient gradient-2"></div>
+        <div class="gradient gradient-3"></div>
+
+        <div class="stars">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- NAVBAR -->
+    <!-- ============================= -->
+
+    <header class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🎫
+            </div>
+
+            <div class="brand-text">
+
+                <h2>
+                    Ticket<span>AI</span>
+                </h2>
+
+                <p>
+                    Smart ticket booking
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                AI Online
+
+            </div>
+
+
+            <button
+                class="profile-button"
+                id="profileButton"
+                type="button"
+            >
+
+                <span class="profile-avatar">
+                    👤
+                </span>
+
+                <span class="profile-name">
+                    User
+                </span>
+
+                <span class="profile-arrow">
+                    ▾
+                </span>
+
+            </button>
+
+
+            <button
+                class="logout-button"
+                id="logoutButton"
+                type="button"
+            >
+
+                ⇥ Logout
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ============================= -->
+    <!-- MAIN -->
+    <!-- ============================= -->
+
+    <main class="dashboard">
+
+
+        <!-- ============================= -->
+        <!-- LEFT SIDE -->
+        <!-- ============================= -->
+
+        <section class="assistant-section">
+
+
+            <div class="welcome">
+
+                <span class="small-label">
+                    ✦ AI TICKET ASSISTANT
+                </span>
+
+                <h1>
+                    Where are you
+                    <span>going?</span>
+                </h1>
+
+                <p>
+                    Tell me where you want to go.
+                    I'll help you find and book the perfect ticket.
+                </p>
+
+            </div>
+
+
+            <!-- AI ORB -->
+
+            <div class="orb-container">
+
+                <div class="orb-glow"></div>
+
+                <div class="orb-ring ring-one"></div>
+                <div class="orb-ring ring-two"></div>
+                <div class="orb-ring ring-three"></div>
+
+                <button
+                    class="ai-orb"
+                    id="micButton"
+                    type="button"
+                    aria-label="Start voice assistant"
+                >
+
+                    <div class="orb-inner">
+
+                        <span class="orb-star">
+                            ✦
+                        </span>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="voice-status"
+                id="voiceStatus"
+            >
+
+                <div class="voice-bars">
+
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+
+                </div>
+
+                <span id="voiceStatusText">
+                    Tap the orb to speak
+                </span>
+
+            </div>
+
+
+            <!-- QUICK VOICE COMMANDS -->
+
+            <div class="quick-commands">
+
+                <p>
+                    Try saying
+                </p>
+
+                <div class="command-list">
+
+                    <button
+                        type="button"
+                        class="command"
+                        data-command="Book a train from Hyderabad to Delhi"
+                    >
+                        🚆 Book a train
+                    </button>
+
+                    <button
+                        type="button"
+                        class="command"
+                        data-command="Find a flight from Hyderabad to Mumbai"
+                    >
+                        ✈️ Find a flight
+                    </button>
+
+                    <button
+                        type="button"
+                        class="command"
+                        data-command="Book a bus to Bangalore"
+                    >
+                        🚌 Book a bus
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHAT -->
+
+            <div class="conversation-card">
+
+                <div class="conversation-header">
+
+                    <div>
+
+                        <h3>
+                            Conversation
+                        </h3>
+
+                        <p>
+                            Talk naturally with TicketAI
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        id="clearChat"
+                        class="clear-chat"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="chat"
+                    id="chat"
+                >
+
+                    <div class="message ai-message">
+
+                        <div class="message-avatar">
+                            ✦
+                        </div>
+
+                        <div class="message-content">
+
+                            <span class="message-name">
+                                TicketAI
+                            </span>
+
+                            <p>
+                                Hi! I'm your AI ticket assistant.
+                                Where would you like to travel?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="chat-input">
+
+                    <input
+                        type="text"
+                        id="messageInput"
+                        placeholder="Type your request..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="button"
+                        id="sendButton"
+                        aria-label="Send message"
+                    >
+                        ➤
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- RIGHT SIDE -->
+        <!-- ============================= -->
+
+        <aside class="booking-section">
+
+
+            <!-- BOOKING CARD -->
+
+            <div class="booking-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <span class="card-label">
+                            BOOK A TICKET
+                        </span>
+
+                        <h2>
+                            Plan your journey
+                        </h2>
+
+                    </div>
+
+                    <div class="sparkle">
+                        ✦
+                    </div>
+
+                </div>
+
+
+                <!-- TRANSPORT TYPES -->
+
+                <div class="transport-tabs">
+
+                    <button
+                        class="transport active"
+                        data-type="train"
+                        type="button"
+                    >
+
+                        <span>
+                            🚆
+                        </span>
+
+                        <small>
+                            Train
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="transport"
+                        data-type="flight"
+                        type="button"
+                    >
+
+                        <span>
+                            ✈️
+                        </span>
+
+                        <small>
+                            Flight
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="transport"
+                        data-type="bus"
+                        type="button"
+                    >
+
+                        <span>
+                            🚌
+                        </span>
+
+                        <small>
+                            Bus
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="transport"
+                        data-type="movie"
+                        type="button"
+                    >
+
+                        <span>
+                            🎬
+                        </span>
+
+                        <small>
+                            Movie
+                        </small>
+
+                    </button>
+
+                </div>
+
+
+                <!-- FROM -->
+
+                <div class="location-row">
+
+                    <div class="location-icon">
+                        A
+                    </div>
+
+                    <div class="field">
+
+                        <label>
+                            FROM
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fromLocation"
+                            placeholder="Departure city"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- SWAP -->
+
+                <button
+                    class="swap-button"
+                    id="swapButton"
+                    type="button"
+                    aria-label="Swap locations"
+                >
+                    ⇅
+                </button>
+
+
+                <!-- TO -->
+
+                <div class="location-row">
+
+                    <div class="location-icon destination">
+                        B
+                    </div>
+
+                    <div class="field">
+
+                        <label>
+                            TO
+                        </label>
+
+                        <input
+                            type="text"
+                            id="toLocation"
+                            placeholder="Destination city"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATE + PASSENGERS -->
+
+                <div class="form-grid">
+
+                    <div class="small-field">
+
+                        <label>
+                            DATE
+                        </label>
+
+                        <input
+                            type="date"
+                            id="travelDate"
+                        >
+
+                    </div>
+
+
+                    <div class="small-field">
+
+                        <label>
+                            PASSENGERS
+                        </label>
+
+                        <div class="passenger-control">
+
+                            <button
+                                type="button"
+                                id="minusPassenger"
+                            >
+                                −
+                            </button>
+
+                            <span id="passengerCount">
+                                1
+                            </span>
+
+                            <button
+                                type="button"
+                                id="plusPassenger"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <button
+                    class="search-button"
+                    id="searchButton"
+                    type="button"
+                >
+
+                    <span>
+                        Search tickets
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- RECENT SEARCHES -->
+
+            <div class="recent-card">
+
+                <div class="recent-header">
+
+                    <h3>
+                        Recent searches
+                    </h3>
+
+                    <button
+                        type="button"
+                        id="clearRecent"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="recent-list"
+                    id="recentList"
+                >
+
+                    <div class="recent-item">
+
+                        <div class="recent-icon">
+                            🚆
+                        </div>
+
+                        <div class="recent-info">
+
+                            <strong>
+                                Hyderabad → Delhi
+                            </strong>
+
+                            <span>
+                                Train · Today
+                            </span>
+
+                        </div>
+
+                        <span class="recent-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <div class="recent-item">
+
+                        <div class="recent-icon">
+                            ✈️
+                        </div>
+
+                        <div class="recent-info">
+
+                            <strong>
+                                Hyderabad → Mumbai
+                            </strong>
+
+                            <span>
+                                Flight · Yesterday
+                            </span>
+
+                        </div>
+
+                        <span class="recent-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <div class="recent-item">
+
+                        <div class="recent-icon">
+                            🚌
+                        </div>
+
+                        <div class="recent-info">
+
+                            <strong>
+                                Hyderabad → Bangalore
+                            </strong>
+
+                            <span>
+                                Bus · 2 days ago
+                            </span>
+
+                        </div>
+
+                        <span class="recent-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECURITY -->
+
+            <div class="security-note">
+
+                <span>
+                    🔒
+                </span>
+
+                <div>
+
+                    <strong>
+                        Secure booking
+                    </strong>
+
+                    <p>
+                        Your travel information is protected.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- TOAST -->
+    <!-- ============================= -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+
+        <span
+            class="toast-icon"
+            id="toastIcon"
+        >
+            ✓
+        </span>
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- PROFILE MENU -->
+    <!-- ============================= -->
+
+    <div
+        class="profile-menu"
+        id="profileMenu"
+    >
+
+        <div class="profile-menu-header">
+
+            <div class="profile-avatar large">
+                👤
+            </div>
+
+            <div>
+
+                <strong>
+                    User
+                </strong>
+
+                <span>
+                    TicketAI member
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="profile-menu-line"></div>
+
+        <button type="button">
+            👤 My profile
+        </button>
+
+        <button type="button">
+            🎫 My bookings
+        </button>
+
+        <button type="button">
+            ⚙️ Settings
+        </button>
+
+    </div>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TicketAI - Ticket Results</title>
+
+    <link rel="stylesheet" href="ticket-results.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <nav class="navbar">
+
+        <div class="logo-area">
+            <div class="logo-orb">
+                <span>✦</span>
+            </div>
+
+            <div>
+                <h2>TicketAI</h2>
+                <span>Smart Travel Assistant</span>
+            </div>
+        </div>
+
+        <div class="nav-actions">
+
+            <div class="ai-status">
+                <span class="status-dot"></span>
+                AI Online
+            </div>
+
+            <button
+                class="back-button"
+                onclick="goBack()"
+            >
+                ← Dashboard
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <main class="results-container">
+
+        <section class="search-summary">
+
+            <div class="summary-title">
+
+                <span class="small-label">
+                    AI SEARCH RESULTS
+                </span>
+
+                <h1>
+                    Available Tickets
+                </h1>
+
+                <p>
+                    We found the best travel options for your journey.
+                </p>
+
+            </div>
+
+            <div class="route-card">
+
+                <div class="location">
+
+                    <span class="location-label">
+                        FROM
+                    </span>
+
+                    <strong id="fromLocation">
+                        Hyderabad
+                    </strong>
+
+                </div>
+
+                <div class="route-line">
+
+                    <span class="route-icon">
+                        ✈
+                    </span>
+
+                    <div class="line"></div>
+
+                    <span class="route-icon">
+                        📍
+                    </span>
+
+                </div>
+
+                <div class="location destination">
+
+                    <span class="location-label">
+                        TO
+                    </span>
+
+                    <strong id="toLocation">
+                        Bangalore
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="trip-info">
+
+            <div class="info-item">
+
+                <span class="info-icon">📅</span>
+
+                <div>
+                    <span>Date</span>
+                    <strong id="travelDate">
+                        28 September 2026
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-icon">🚆</span>
+
+                <div>
+                    <span>Transport</span>
+                    <strong id="transportType">
+                        Train
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-icon">👥</span>
+
+                <div>
+                    <span>Passengers</span>
+                    <strong id="passengerCount">
+                        2
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-icon">🔎</span>
+
+                <div>
+                    <span>Results</span>
+                    <strong id="resultCount">
+                        3 options
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="results-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="small-label">
+                        RECOMMENDED OPTIONS
+                    </span>
+
+                    <h2>
+                        Available Tickets
+                    </h2>
+                </div>
+
+                <button
+                    class="filter-button"
+                    onclick="showFilterMessage()"
+                >
+                    ☰ Filters
+                </button>
+
+            </div>
+
+
+            <div id="ticketList" class="ticket-list"></div>
+
+        </section>
+
+    </main>
+
+
+    <div id="toast" class="toast">
+
+        <div class="toast-icon">
+            ✓
+        </div>
+
+        <span id="toastMessage">
+            Message
+        </span>
+
+    </div>
+
+
+    <script src="ticket-results.js"></script>
+
+</body>
+</html>
