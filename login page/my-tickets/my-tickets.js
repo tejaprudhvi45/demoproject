@@ -126,7 +126,7 @@ function showTab(
 function viewTicket() {
 
     window.location.href =
-        "booking-confirmation.html";
+       "../booking-confirm/booking-confirmation.html";
 
 }
 
@@ -191,7 +191,7 @@ function closeQR() {
 function bookNewTicket() {
 
     window.location.href =
-        "ticket-results.html";
+         "../ticket/ticket-results.html";
 
 }
 

@@ -223,7 +223,7 @@ document
 
         setTimeout(function () {
 
-            window.location.href = "payment.html";
+           window.location.href = "../payment/payment.html";
 
         }, 1200);
 

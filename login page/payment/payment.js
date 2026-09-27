@@ -225,7 +225,7 @@ function processPayment() {
     setTimeout(function () {
 
         window.location.href =
-            "booking-confirmation.html";
+            "../booking-confirm/booking-confirmation.html";
 
     }, 1500);
 

@@ -121,7 +121,7 @@ function downloadTicket() {
 function goToDashboard() {
 
     window.location.href =
-        "dashboard.html";
+        "../document/dashboard.html";
 
 }
 
@@ -149,5 +149,13 @@ function showToast(message) {
         );
 
     }, 2500);
+
+}
+// My Tickets
+
+function goToMyTickets() {
+
+    window.location.href =
+        "../my-tickets/my-tickets.html";
 
 }

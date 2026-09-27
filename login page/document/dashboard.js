@@ -233,9 +233,15 @@ searchButton.addEventListener(
 
 function searchTickets() {
 
-    const from = fromInput.value.trim();
-    const to = toInput.value.trim();
-    const date = dateInput.value;
+    const from =
+        fromLocation.value.trim();
+
+    const to =
+        toLocation.value.trim();
+
+    const date =
+        travelDate.value;
+
 
     if (!from || !to) {
 
@@ -247,7 +253,11 @@ function searchTickets() {
         return;
     }
 
-    if (from.toLowerCase() === to.toLowerCase()) {
+
+    if (
+        from.toLowerCase() ===
+        to.toLowerCase()
+    ) {
 
         showToast(
             "Departure and destination cannot be the same.",
@@ -256,6 +266,7 @@ function searchTickets() {
 
         return;
     }
+
 
     if (!date) {
 
@@ -267,16 +278,44 @@ function searchTickets() {
         return;
     }
 
-    const params = new URLSearchParams();
 
-    params.set("from", from);
-    params.set("to", to);
-    params.set("transport", selectedTransport);
-    params.set("date", date);
-    params.set("passengers", passengers);
+    const params =
+        new URLSearchParams();
+
+
+    params.set(
+        "from",
+        from
+    );
+
+
+    params.set(
+        "to",
+        to
+    );
+
+
+    params.set(
+        "transport",
+        selectedTransport
+    );
+
+
+    params.set(
+        "date",
+        date
+    );
+
+
+    params.set(
+        "passengers",
+        passengers
+    );
+
 
     window.location.href =
         `ticket-results.html?${params.toString()}`;
+
 }
 
 /* =========================================
