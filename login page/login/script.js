@@ -57,46 +57,62 @@ passwordToggle.addEventListener(
     }
 );
 
+loginForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-loginForm.addEventListener(
-    "submit",
-    (event) => {
+    const userId = document.getElementById("userId").value.trim();
+    const passwordValue = password.value.trim();
 
-        event.preventDefault();
+    if (!userId || !passwordValue) {
+        showToast("Please enter your User ID and password.", false);
+        return;
+    }
 
-        const email =
-            document.getElementById("email").value.trim();
+    if (!/^\d{6}$/.test(passwordValue)) {
+        showToast("Password must be exactly 6 digits.", false);
+        return;
+    }
 
-        const passwordValue =
-            password.value.trim();
+    loginButton.classList.add("loading");
+    loginButton.disabled = true;
 
-        if (!email || !passwordValue) {
+    try {
+        const response = await fetch("http://localhost:5000/api/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                userId: userId,
+                password: passwordValue
+            })
+        });
 
-            showToast(
-                "Please enter your email and password.",
-                false
-            );
+        const data = await response.json();
 
+        if (!response.ok) {
+            showToast(data.message || "Login failed.", false);
             return;
         }
 
-        loginButton.classList.add("loading");
+        localStorage.setItem("ticketAI_token", data.token);
+        localStorage.setItem("ticketAI_userId", data.user.userId);
 
-        loginButton.disabled = true;
+        showToast("Login successful!", true);
 
         setTimeout(() => {
+            window.location.href = "../document/dashboard.html";
+        }, 1000);
 
-            loginButton.classList.remove("loading");
+    } catch (error) {
+        console.log("Login error:", error);
+        showToast("Unable to connect to server.", false);
 
-            loginButton.disabled = false;
-
-            window.location.href = "dashboard.html";
-
-        }, 1800);
-
+    } finally {
+        loginButton.classList.remove("loading");
+        loginButton.disabled = false;
     }
-);
-
+});
 
 voiceButton.addEventListener(
     "click",
