@@ -313,8 +313,8 @@ function searchTickets() {
     );
 
 
-    window.location.href =
-        `ticket-results.html?${params.toString()}`;
+   window.location.href =
+    `../ticket/ticket-results.html?${params.toString()}`;
 
 }
 
@@ -861,8 +861,7 @@ logoutButton.addEventListener(
              * with your actual login page.
              */
 
-            window.location.href =
-                "index.html";
+            window.location.href = "../login/index.html";
 
         }, 900);
 

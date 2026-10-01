@@ -77,7 +77,7 @@ loginForm.addEventListener("submit", async (event) => {
     loginButton.disabled = true;
 
     try {
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch("https://cautious-space-spork-gxr6pvwrqxgp3j5x-5000.app.github.dev/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
