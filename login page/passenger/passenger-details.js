@@ -235,7 +235,7 @@ document
 function goBack() {
 
     window.location.href =
-        "seat-selection.html";
+        "../seat-selection/seat-selection.html";
 
 }
 

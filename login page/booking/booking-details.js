@@ -124,7 +124,7 @@ function continueBooking() {
     setTimeout(function () {
 
         // Step 5 page
-        window.location.href = "seat-selection.html";
+        window.location.href = "../seat-selection/seat-selection.html";
 
     }, 1200);
 

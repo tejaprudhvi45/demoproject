@@ -142,21 +142,6 @@ forgotPassword.addEventListener(
 );
 
 
-registerLink.addEventListener(
-    "click",
-    (event) => {
-
-        event.preventDefault();
-
-        showToast(
-            "Registration page will be added soon.",
-            true
-        );
-
-    }
-);
-
-
 let toastTimer;
 
 

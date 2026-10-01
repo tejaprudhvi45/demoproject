@@ -90,7 +90,7 @@ function continueBooking() {
     setTimeout(function() {
 
         window.location.href =
-            "passenger-details.html";
+            "../passenger/passenger-details.html";
 
     }, 1000);
 
