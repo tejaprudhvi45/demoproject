@@ -246,7 +246,7 @@ function bookTicket(index) {
     setTimeout(() => {
 
         window.location.href =
-            "booking.html";
+            "../booking/booking-details.html";
 
     }, 1000);
 }
